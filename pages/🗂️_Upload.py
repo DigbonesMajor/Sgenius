@@ -18,7 +18,7 @@ def main():
         st.switch_page("🤖_Sgenius.py")
 
     
-    st.header("Ask your pdf(OpenAI) 🤓")
+    st.header("Upload your pdf")
     
     # Uploading the file
     pdf = st.file_uploader("Upload your pdf", type="pdf")
