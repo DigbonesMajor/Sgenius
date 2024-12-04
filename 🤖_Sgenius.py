@@ -10,6 +10,7 @@ from langchain.chains.question_answering import load_qa_chain
 
 im = Image.open("Societe-Generale-Emblem.png")
 
+
 st.set_page_config(page_title="Chat With SGenius",page_icon=im)
 
 # Custom HTML/CSS for the banner
@@ -43,14 +44,13 @@ load_dotenv()
 with st.sidebar:
     st.subheader("Settings")
     st.write("LogIn as Admin to upload documents")
-    st.text_input("Host",value="admin")
-    st.text_input("Port",value="3306")
+    adm = st.text_input("Host",value="")
     st.text_input("Password",value="******")
-    
     is_clicked = st.button("connect")
 
 if is_clicked:
-    switch_page("Upload")
+    if(adm=="Admin"):
+        switch_page("Upload")
 
 for message in st.session_state.chat_history:
     if isinstance(message, AIMessage):
