@@ -1,0 +1,3 @@
+knowledge_base =""
+
+api_key="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"
