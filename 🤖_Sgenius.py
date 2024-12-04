@@ -76,7 +76,7 @@ if user_query is not None and user_query.strip() != "":
         else:
             docs = cf.knowledge_base.similarity_search(user_query)
 
-            llm = OpenAI(openai_api_key=cf.api_key)
+            llm = OpenAI(openai_api_key=st.secrets["api_key"])
             chain = load_qa_chain(llm, chain_type="stuff")
             response = chain.run(input_documents=docs, question = user_query)
 
