@@ -5,3 +5,8 @@ A chatbot GUI with Python and module like Tkinter is a simple interface that ena
 The chatbot can be programmed using natural language processing (NLP) techniques and machine learning algorithms, and can be trained on a corpus of data. The GUI can feature a text box for user input and a text area for the chatbot's responses, along with buttons for initiating and terminating the conversation and a menu for selecting different chatbot functionalities.
 Additional features like voice recognition, text-to-speech conversion, and sentiment analysis can also be added to enhance the user experience and make the conversation more engaging.
 Overall, the Tkinter chatbot GUI is a powerful and straightforward tool for creating chatbot interfaces that provide a seamless and intuitive user experience.
+
+Video
+
+https://github.com/user-attachments/assets/5edb4a40-c1b1-45f4-ad23-b234c4c1da27
+
