@@ -40,7 +40,7 @@ def main():
         chunks = text_splitter.split_text(text)
 
         # Create embeddings
-        embeddings = OpenAIEmbeddings(openai_api_key=cf.api_key)
+        embeddings = OpenAIEmbeddings(openai_api_key=st.secrets["api_key"])
 
         # Creating an object on which we will be able to search FAISS
         cf.knowledge_base = FAISS.from_texts(chunks, embeddings)
@@ -54,7 +54,7 @@ def main():
         if user_question:
             docs = cf.knowledge_base.similarity_search(user_question)
 
-            llm = OpenAI(openai_api_key=cf.api_key)
+            llm = OpenAI(openai_api_key=st.secrets["api_key"])
             chain = load_qa_chain(llm, chain_type="stuff")
             response = chain.run(input_documents=docs, question = user_question)
 
