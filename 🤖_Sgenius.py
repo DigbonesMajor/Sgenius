@@ -70,7 +70,7 @@ if user_query is not None and user_query.strip() != "":
         
     with st.chat_message("AI", avatar=im):
 
-        if "hi" in user_query or "Hi" in user_query:
+        if " hi " in user_query or " Hi " in user_query:
             response = "Hello! How are you doing"
             st.markdown(response)
         else:
